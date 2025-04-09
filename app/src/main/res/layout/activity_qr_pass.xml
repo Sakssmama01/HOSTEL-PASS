@@ -1,31 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#E8F5E9"> <!-- Light green background -->
+
+    <ImageView
+        android:src="@android:drawable/checkbox_on_background"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:tint="#388E3C"
+        android:layout_marginBottom="24dp" />
 
     <TextView
         android:id="@+id/tv_status"
-        android:text="You Are Approved!"
-        android:textSize="24sp"
+        android:text="🎉 You Are Approved!"
+        android:textSize="26sp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_green_dark"
-        android:layout_marginBottom="20dp"
+        android:textColor="#2E7D32"
+        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tv_datetime"
-        android:text="Date &amp; Time:"
+        android:text="Date &amp; Time: 10 April 2025, 4:45 PM"
         android:textSize="18sp"
-        android:layout_marginBottom="20dp"
+        android:textColor="#555555"
+        android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <!-- Optional image for success -->
-    <ImageView
-        android:src="@android:drawable/checkbox_on_background"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
 </LinearLayout>
