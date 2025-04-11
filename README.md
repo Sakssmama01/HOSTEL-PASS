@@ -11,7 +11,7 @@ Here are some UI screens of the app to give you a visual overview:
 
 ### 🔐 Login Screen
 
-![Login Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/images/login_screen.jpeg?raw=true)
+![Login Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.54.03.jpeg?raw=true)
 
 ---
 
