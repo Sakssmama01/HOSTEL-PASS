@@ -17,4 +17,4 @@ Here are some UI screens of the app to give you a visual overview:
 
 ### 🪪 E-pass Screen
 
-![E-pass Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/images/epass_screen.jpeg?raw=true)
+![E-Pass Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.53.42%20(3).jpeg?raw=true)
