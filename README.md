@@ -1,20 +1,38 @@
-## 📱 App Screenshots
+# 🏨 HOSTEL-PASS App
 
-Here are some UI screens of the app to give you a visual overview:
+HOSTEL-PASS is a smart digital solution designed for students staying in hostels. It simplifies the gate pass process by replacing paperwork with a fast, secure, and user-friendly digital system.
 
 ---
 
-### 🏠 Home Screen
+## 🚀 Features
 
-![Home Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.53.41.jpeg?raw=true)
+- ✅ Digital Gate Pass Generation
+- 🔐 Secure Login for Students & Wardens
+- 🧾 E-Pass Tracking and Approval System
+- 📅 History of Previous Passes
+- 🏃 Easy Outing Request and Approval
+- 📱 Clean and Minimal User Interface
+
 ---
 
-### 🔐 Login Screen
+## 🖼️ App Screenshots
 
+### 🏠 Home Page  
+![Home Page](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.53.41.jpeg?raw=true)
+
+### 🔐 Login Screen  
 ![Login Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/Screenshot%202025-04-11%20161117.png?raw=true)
 
+### 📄 E-Pass Screen  
+![E-Pass Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.53.42%20(3).jpeg?raw=true)
+
 ---
 
-### 🪪 E-pass Screen
+## 👨‍💻 Developed By
 
-![E-Pass Screen](https://github.com/Sakssmama01/HOSTEL-PASS/blob/main/WhatsApp%20Image%202025-04-11%20at%2015.53.42%20(3).jpeg?raw=true)
+**Rajiv Mishra**  
+GitHub: [@Sakssmama01](https://github.com/Sakssmama01)
+
+---
+
+Feel free to ⭐ the repo or contribute to improve it! 🚀
