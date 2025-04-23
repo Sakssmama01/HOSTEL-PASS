@@ -1,24 +1,38 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.safehostel">
 
     <application
         android:allowBackup="true"
-        android:label="EPaas"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.SafeHostel">
+        android:label="SafeHostel"
+        android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
 
-        <activity android:name=".QRPassActivity" />
-        <activity android:name=".LeaveRequestActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:label="Main Activity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:exported="true"> <!-- Add this line -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-    </application>
+        <activity android:name=".StudentActivity"
+            android:label="Student Activity"
+            android:exported="true"/>
 
+        <activity android:name=".WardenActivity"
+            android:label="Warden Activity"
+            android:exported="true"/>
+
+        <activity android:name=".ApplyLeaveActivity"
+            android:label="Apply Leave Activity"
+            android:exported="true"/>
+
+        <activity android:name=".LeaveConfirmationActivity"
+            android:label="Leave Confirmation Activity"
+            android:exported="true"/>
+
+    </application>
 </manifest>

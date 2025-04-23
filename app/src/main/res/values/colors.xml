@@ -1,8 +1,12 @@
 <resources>
-    <color name="purple_500">#6200EE</color>
-    <color name="purple_700">#3700B3</color>
-    <color name="teal_200">#03DAC5</color>
+    <color name="purple_500">#BB86FC</color>
+    <color name="purple_700">#6200EE</color>
+    <color name="teal_200">#03DAC6</color>
     <color name="teal_700">#018786</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <!-- New colors for launch screen -->
+    <color name="launch_background">#FFFFFF</color> <!-- Light background -->
+    <color name="launch_text">#6200EE</color>       <!-- Bright purple text -->
 </resources>
