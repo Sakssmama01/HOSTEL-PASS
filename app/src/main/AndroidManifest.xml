@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.safehostel">
 
@@ -5,34 +6,51 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="SafeHostel"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
-
         <activity
-            android:name=".MainActivity"
-            android:label="Main Activity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
-            android:exported="true"> <!-- Add this line -->
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.epaas.LoginActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Main Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".StudentActivity"
-            android:label="Student Activity"
-            android:exported="true"/>
-
-        <activity android:name=".WardenActivity"
-            android:label="Warden Activity"
-            android:exported="true"/>
-
-        <activity android:name=".ApplyLeaveActivity"
-            android:label="Apply Leave Activity"
-            android:exported="true"/>
-
-        <activity android:name=".LeaveConfirmationActivity"
-            android:label="Leave Confirmation Activity"
-            android:exported="true"/>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Student Activity -->
+        <activity
+            android:name=".StudentActivity"
+            android:exported="true"
+            android:label="Student Activity" /> <!-- Warden Activity -->
+        <activity
+            android:name=".WardenActivity"
+            android:exported="true"
+            android:label="Warden Activity" /> <!-- Apply Leave Activity -->
+        <activity
+            android:name=".ApplyLeaveActivity"
+            android:exported="true"
+            android:label="Apply Leave Activity" /> <!-- Leave Confirmation Activity -->
+        <activity
+            android:name=".LeaveConfirmationActivity"
+            android:exported="true"
+            android:label="Leave Confirmation Activity" /> <!-- Leave History Activity -->
+        <activity
+            android:name=".LeaveHistoryActivity"
+            android:exported="true"
+            android:label="Leave History Activity" />
     </application>
+
 </manifest>

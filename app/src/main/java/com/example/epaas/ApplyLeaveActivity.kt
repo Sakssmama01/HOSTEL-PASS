@@ -89,5 +89,17 @@ class ApplyLeaveActivity : AppCompatActivity() {
 
         // Optionally, finish the current activity to prevent going back to it
         finish()
+
+        // Save leave data to SharedPreferences
+        val sharedPreferences = getSharedPreferences("LeaveHistory", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val existingHistory = sharedPreferences.getString("leaves", "") ?: ""
+        val newEntry = "$studentName|$rollNo|$leaveDate|$leaveReason"
+        val updatedHistory = existingHistory + newEntry + ";;"  // separate entries with ;;
+        editor.putString("leaves", updatedHistory)
+        editor.apply()
+
     }
 }
+
+

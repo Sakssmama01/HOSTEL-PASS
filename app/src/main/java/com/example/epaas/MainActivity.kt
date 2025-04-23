@@ -1,31 +1,41 @@
 package com.safehostel
 
-import android.content.Intent  // Import this
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import com.example.epaas.LeaveHistoryActivity
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        // Find the buttons by ID
-        val studentButton = findViewById<Button>(R.id.studentButton)
-        val wardenButton = findViewById<Button>(R.id.wardenButton)
+        val sharedPreferences = getSharedPreferences("UserCredentials", Context.MODE_PRIVATE)
+        val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
 
-        // Set onClickListeners for the buttons
-        studentButton.setOnClickListener {
-            // Navigate to StudentActivity
-            val intent = Intent(this, StudentActivity::class.java)
-            startActivity(intent)
-        }
+        if (!isLoggedIn) {
+            startActivity(Intent(this, com.example.epaas.LoginActivity::class.java))
+            finish()
+        } else {
+            setContentView(R.layout.activity_main)
 
-        wardenButton.setOnClickListener {
-            // Navigate to WardenActivity
-            val intent = Intent(this, WardenActivity::class.java)
-            startActivity(intent)
+            val studentButton = findViewById<Button>(R.id.studentButton)
+            val wardenButton = findViewById<Button>(R.id.wardenButton)
+            val historyButton = findViewById<Button>(R.id.btn_view_history)
+
+            studentButton.setOnClickListener {
+                startActivity(Intent(this, StudentActivity::class.java))
+            }
+
+            wardenButton.setOnClickListener {
+                startActivity(Intent(this, WardenActivity::class.java))
+            }
+
+            historyButton.setOnClickListener {
+                startActivity(Intent(this, LeaveHistoryActivity::class.java))
+            }
         }
     }
 }
