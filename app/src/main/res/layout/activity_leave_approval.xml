@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F0F4F8">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave Request Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Roll Number -->
+    <TextView
+        android:id="@+id/tv_roll_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Roll No: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Leave Date -->
+    <TextView
+        android:id="@+id/tv_leave_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leave Date: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Reason -->
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reason: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Approval Status -->
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: Approved"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Back to Main Menu Button -->
+    <Button
+        android:id="@+id/btn_back_to_main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Main Menu"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:paddingVertical="14dp"
+        android:elevation="6dp"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

@@ -45,7 +45,10 @@ dependencies {
     implementation(libs.material.v190)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout.v214)
-    implementation(libs.androidx.activity) // ✅ Add this
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.firebase.database.ktx)
+    implementation(libs.androidx.material3.android) // ✅ Add this
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit.v115)

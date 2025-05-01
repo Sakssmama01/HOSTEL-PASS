@@ -7,7 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.util.*
+import com.safehostel.R
+import java.util.Calendar
 
 class ApplyLeaveActivity : AppCompatActivity() {
 
@@ -76,13 +77,13 @@ class ApplyLeaveActivity : AppCompatActivity() {
 
     // Function to navigate to LeaveConfirmationActivity
     private fun navigateToLeaveConfirmation(studentName: String, rollNo: String, leaveDate: String, leaveReason: String) {
-        val intent = Intent(this, LeaveConfirmationActivity::class.java)
+        val intent = Intent(this, LeaveApprovalActivity::class.java) // Corrected Intent
 
-        // Passing data to LeaveConfirmationActivity
-        intent.putExtra("STUDENT_NAME", studentName)
+        // Passing data to LeaveApprovalActivity
+        intent.putExtra("NAME", studentName)
         intent.putExtra("ROLL_NO", rollNo)
         intent.putExtra("LEAVE_DATE", leaveDate)
-        intent.putExtra("LEAVE_REASON", leaveReason)
+        intent.putExtra("REASON", leaveReason)
 
         // Start the new activity
         startActivity(intent)
@@ -98,8 +99,5 @@ class ApplyLeaveActivity : AppCompatActivity() {
         val updatedHistory = existingHistory + newEntry + ";;"  // separate entries with ;;
         editor.putString("leaves", updatedHistory)
         editor.apply()
-
     }
 }
-
-

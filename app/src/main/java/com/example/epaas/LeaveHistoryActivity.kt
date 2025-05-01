@@ -1,12 +1,10 @@
-package com.example.epaas
+package com.safehostel
 
-import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.safehostel.LeaveEntry
-import com.safehostel.R
 
 class LeaveHistoryActivity : AppCompatActivity() {
 
@@ -17,19 +15,25 @@ class LeaveHistoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leave_history)
 
-        recyclerView = findViewById(R.id.recyclerViewHistory)
+        // Initialize RecyclerView
+        recyclerView = findViewById(R.id.recyclerViewLeaveHistory)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val sharedPreferences = getSharedPreferences("LeaveHistory", Context.MODE_PRIVATE)
-        val historyData = sharedPreferences.getString("leaves", "") ?: ""
-        val entries = historyData.split(";;").filter { it.isNotBlank() }
+        // Load dummy leave history data (you can replace this with real data later)
+        val leaveHistoryList = listOf(
+            LeaveEntry("Rajiv Mishra", "GU123", "2025-04-24", "Family Emergency"),
+            LeaveEntry("Deepak kumar ", "GU124", "2025-04-22", "Medical Checkup"),
+            LeaveEntry("Gaurav Tomar", "GU125", "2025-04-20", "Personal Work")
+        )
 
-        val leaveList = entries.map {
-            val parts = it.split("|")
-            LeaveEntry(parts[0], parts[1], parts[2], parts[3])
-        }
+        // Attach adapter
 
-        adapter = LeaveHistoryAdapter(leaveList)
+        adapter = LeaveHistoryAdapter(leaveHistoryList)
         recyclerView.adapter = adapter
+
+        // Optional: show toast when data is loaded
+        Toast.makeText(this, "Leave history loaded!", Toast.LENGTH_SHORT).show()
     }
+
 }
+

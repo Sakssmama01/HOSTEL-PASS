@@ -9,48 +9,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Leave Approval Activity -->
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.safehostel.LeaveApprovalActivity"
             android:exported="false" />
+
+        <!-- Leave Request Activity -->
         <activity
-            android:name="com.example.epaas.LoginActivity"
+            android:name="com.safehostel.LeaveRequestActivity"
+            android:exported="false" />
+
+        <!-- Login Activity (Launcher) -->
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Main Activity -->
+        </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:label="Register" />
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="Main Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- Student Activity -->
+        <!-- Student Activity -->
         <activity
             android:name=".StudentActivity"
-            android:exported="true"
-            android:label="Student Activity" /> <!-- Warden Activity -->
+            android:exported="true" />
+
+        <!-- Warden Activity -->
         <activity
             android:name=".WardenActivity"
-            android:exported="true"
-            android:label="Warden Activity" /> <!-- Apply Leave Activity -->
+            android:exported="true" />
+
+        <!-- Apply Leave Activity -->
         <activity
             android:name=".ApplyLeaveActivity"
-            android:exported="true"
-            android:label="Apply Leave Activity" /> <!-- Leave Confirmation Activity -->
-        <activity
-            android:name=".LeaveConfirmationActivity"
-            android:exported="true"
-            android:label="Leave Confirmation Activity" /> <!-- Leave History Activity -->
+            android:exported="true" />
+
+        <!-- Leave History Activity -->
         <activity
             android:name=".LeaveHistoryActivity"
             android:exported="true"
             android:label="Leave History Activity" />
+
     </application>
 
 </manifest>

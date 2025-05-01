@@ -8,7 +8,7 @@
     android:padding="24dp"
     android:gravity="center"
     android:background="#FAFAFA"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"> <!-- Updated context -->
 
     <!-- Roll No Field -->
     <com.google.android.material.textfield.TextInputLayout

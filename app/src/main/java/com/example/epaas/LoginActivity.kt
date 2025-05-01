@@ -1,15 +1,14 @@
-package com.example.epaas
+package com.safehostel
+
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.safehostel.MainActivity
-import com.safehostel.R
-import com.safehostel.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,17 +27,19 @@ class LoginActivity : AppCompatActivity() {
         registerHereButton = findViewById(R.id.btn_register_here)
 
         loginButton.setOnClickListener {
-            val rollNo = rollNoEditText.text.toString()
-            val password = passwordEditText.text.toString()
+            val rollNo = rollNoEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
 
             if (validateLogin(rollNo, password)) {
+                // Successful login
                 val sharedPreferences = getSharedPreferences("UserCredentials", Context.MODE_PRIVATE)
                 sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
 
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                finish()
+                finish() // Close login activity
             } else {
+                // Invalid credentials
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
             }
         }
@@ -49,8 +50,22 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validateLogin(rollNo: String, password: String): Boolean {
+        if (rollNo.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please enter both roll number and password", Toast.LENGTH_SHORT).show()
+            return false
+        }
+
         val sharedPreferences = getSharedPreferences("UserCredentials", Context.MODE_PRIVATE)
+
+        // Log the rollNo and password for debugging
+        Log.d("LoginActivity", "Validating login for rollNo: $rollNo")
+
         val savedPassword = sharedPreferences.getString(rollNo, null)
+        if (savedPassword == null) {
+            Log.d("LoginActivity", "No password found for rollNo: $rollNo")
+        }
+
+        // Validate if saved password matches entered password
         return savedPassword == password
     }
 }

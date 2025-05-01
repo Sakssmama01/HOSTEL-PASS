@@ -1,45 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:gravity="center">
+    android:background="#F5F5F5"
+    android:padding="24dp">
 
-    <!-- Roll Number EditText -->
-    <EditText
-        android:id="@+id/et_roll_no"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Roll No"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginBottom="20dp"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="24dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:layoutDirection="ltr"
+        android:translationZ="2dp">
 
-    <!-- Password EditText -->
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textSize="16sp"
-        android:layout_marginBottom="20dp"/>
+        <!-- Roll Number EditText -->
+        <EditText
+            android:id="@+id/et_roll_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Roll No"
+            android:inputType="text"
+            android:padding="12dp"
+            android:backgroundTint="#BDBDBD"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_marginBottom="10dp"/>
+        <!-- Password EditText -->
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:backgroundTint="#BDBDBD"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp" />
 
-    <!-- Register Button -->
-    <Button
-        android:id="@+id/btn_register_here"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register" />
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:backgroundTint="#3F51B5"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp" />
 
-</LinearLayout>
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btn_register_here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:backgroundTint="#FF4081"
+            android:textColor="@android:color/white"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>
